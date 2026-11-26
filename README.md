@@ -2,6 +2,8 @@
 
 A local perpetual futures screener for Binance USDⓈ-M and Hyperliquid, including HIP-3. One shared workspace, server-side autosave and background alerts. No exchange account or trading credentials required.
 
+![Screenit showing Binance perpetual futures with 24-hour trend charts, volume and funding rates](https://github.com/snailBoob/screenit/releases/download/v1.1.6/screenit-binance.jpg)
+
 ## Run
 
 **Docker:** The public image is `ghcr.io/snailboob/screenit:1.1.6` (Linux amd64 and arm64). To download it directly, run `docker pull ghcr.io/snailboob/screenit:1.1.6`. No registry login is required.
