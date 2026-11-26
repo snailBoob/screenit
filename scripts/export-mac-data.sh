@@ -2,7 +2,7 @@
 # One-time cutover: add the stopped Mac workspace to an existing DS918+ export.
 set -eu
 umask 077
-out=$(cd "${1:-$HOME/Downloads/screenit-ds918-1.1.6}" && pwd -P)
+out=$(cd "${1:-$HOME/Downloads/screenit-ds918-1.1.7}" && pwd -P)
 [ -s "$out/screenit-amd64.tar" ] || { echo 'Run build-ds918.sh first.' >&2; exit 1; }
 if [ -e "$out/data" ] || [ -L "$out/data" ]; then
   echo 'The export already contains data. Nothing was changed.' >&2; exit 1

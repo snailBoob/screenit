@@ -1,4 +1,4 @@
-# SCREENIT. 1.1.6
+# SCREENIT. 1.1.7
 
 A local perpetual futures screener for Binance USDⓈ-M and Hyperliquid, including HIP-3. One shared workspace, server-side autosave and background alerts. No exchange account or trading credentials required.
 
@@ -6,7 +6,7 @@ A local perpetual futures screener for Binance USDⓈ-M and Hyperliquid, includi
 
 ## Run
 
-**Docker:** The public image is `ghcr.io/snailboob/screenit:1.1.6` (Linux amd64 and arm64). To download it directly, run `docker pull ghcr.io/snailboob/screenit:1.1.6`. No registry login is required.
+**Docker:** The public image is `ghcr.io/snailboob/screenit:1.1.7` (Linux amd64 and arm64). To download it directly, run `docker pull ghcr.io/snailboob/screenit:1.1.7`. No registry login is required.
 
 **Mac (Apple Silicon or Intel):** Start [Docker Desktop](https://docs.docker.com/desktop/setup/install/mac-install/). Place `compose.yaml` in `~/Docker/screenit` and preserve your `data/`, `.env` and `compose.override.yaml`.
 
@@ -16,7 +16,7 @@ From Terminal:
 cd ~/Docker/screenit && docker compose pull && docker compose up -d --wait && open http://localhost:8080
 ```
 
-**Synology DS918+:** On the Mac run `sh scripts/build-ds918.sh` from the updated source directory. The script builds and checks `linux/amd64` and exports the image to `~/Downloads/screenit-ds918-1.1.6/`. For a first-time migration, `sh scripts/export-mac-data.sh` copies the stopped Mac workspace into the export. If the workspace is already on the NAS, keep it. Follow the [NAS project and storage instructions](deploy/ds918/INSTALL.md): put `compose.yaml` in `/Docker/screenit`, beside the existing `data/` folder. No public image registry is required.
+**Synology DS918+:** On the Mac run `sh scripts/build-ds918.sh` from the updated source directory. The script builds and checks `linux/amd64` and exports the image to `~/Downloads/screenit-ds918-1.1.7/`. For a first-time migration, `sh scripts/export-mac-data.sh` copies the stopped Mac workspace into the export. If the workspace is already on the NAS, keep it. Follow the [NAS project and storage instructions](deploy/ds918/INSTALL.md): put `compose.yaml` in `/Docker/screenit`, beside the existing `data/` folder. No public image registry is required.
 
 For an existing Docker Desktop installation in `~/Docker/screenit`, run `sh scripts/mac-storage.sh` once to keep the workspace in `~/Docker/screenit/data`. The migration stops Screenit before copying its SQLite files, keeps the original volume, and creates a local `compose.override.yaml`. Keep both `data/` and that override when updating the app. The host data directory survives container and volume removal.
 
