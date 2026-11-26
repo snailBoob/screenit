@@ -1,0 +1,22 @@
+services:
+  screenit:
+    image: ghcr.io/snailboob/screenit:1.1.6
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${SCREENIT_HOST_PORT:-8080}:8080"
+    volumes:
+      - screenit-data:/data
+    environment:
+      SCREENIT_NTFY_TRUSTED_URL: ${SCREENIT_NTFY_TRUSTED_URL:-}
+      SCREENIT_NTFY_TOKEN: ${SCREENIT_NTFY_TOKEN:-}
+      SCREENIT_MARKET_CAP: ${SCREENIT_MARKET_CAP:-1}
+      SCREENIT_COINGECKO_KEY: ${SCREENIT_COINGECKO_KEY:-}
+      SCREENIT_FINNHUB_KEY: ${SCREENIT_FINNHUB_KEY:-}
+      SCREENIT_ALLOWED_HOSTS: ${SCREENIT_ALLOWED_HOSTS:-}
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+volumes:
+  screenit-data:

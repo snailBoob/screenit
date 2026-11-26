@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg"><defs>
+<symbol id="filter" viewBox="0 0 24 24"><path d="M3 4h18l-7 8v8l-4-2v-6z"/></symbol>
+<symbol id="columns" viewBox="0 0 24 24"><path d="M4 4v16M12 4v16M20 4v16"/></symbol>
+<symbol id="bell" viewBox="0 0 24 24"><path d="M3.5 17c2 0 2.5-3 2.5-6 0-4 2.1-7 6-7s6 3 6 7c0 3 .5 6 2.5 6zM10 20c1 1.4 3 1.4 4 0"/></symbol>
+<symbol id="chart" viewBox="0 0 16 16"><path d="M2 2v12h12M4.5 10l3-4 2.5 2 3.5-5"/></symbol>
+<symbol id="star" viewBox="0 0 16 16"><path d="m8 1.6 2 4 4.5.7-3.2 3.1.7 4.5-4-2.1-4 2.1.8-4.5L1.5 6.3l4.5-.7z"/></symbol>
+<symbol id="binance" viewBox="0 0 16 16"><path fill="currentColor" stroke="none" d="m8 0 4 4-1.6 1.6L8 3.2 5.6 5.6 4 4zm0 5.7 2.3 2.3L8 10.3 5.7 8zM2.3 5.7 4.6 8l-2.3 2.3L0 8zm11.4 0L16 8l-2.3 2.3L11.4 8zM4 12l1.6-1.6L8 12.8l2.4-2.4L12 12l-4 4z"/></symbol>
+<symbol id="hyper" viewBox="0 0 16 16"><path fill="currentColor" stroke="none" d="M1 8c0-3 .7-4 2-4 1.8 0 2.1 3.5 4 3.5 2.1 0 2.5-5.2 5-5.2 2.2 0 3 3.2 3 6.2s-.8 5.4-2.5 5.4c-2.3 0-3-4.2-5.1-4.2-1.9 0-2.7 2.3-4.2 2.3C1.7 12 1 10 1 8z"/></symbol>
+<symbol id="btc" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#f7931a"/><g transform="rotate(12 10 10)" fill="none" stroke="white" stroke-width="1.8"><path d="M7 5.8h4c3.3 0 3.7 4.1-.2 4.1H8m-.8 0h4c3.6 0 3.5 4.6-.3 4.6H6.7M8.2 6v8.2"/><path stroke-width="1.1" d="M9 3.8v2m2.4-2v2M9 14.6v2m2.4-2v2"/></g></symbol>
+<symbol id="eth" viewBox="0 0 20 20"><path d="m10 1-5.2 9L10 13z" fill="#b5bddc"/><path d="m10 1 5.2 9-5.2 3z" fill="#76809f"/><path d="m10 19-5.2-7.7L10 14.4z" fill="#9faaca"/><path d="m10 19 5.2-7.7-5.2 3.1z" fill="#647493"/></symbol>
+<symbol id="sol" viewBox="0 0 20 20"><path d="m5 4 12 0-2.5 3H2.5z" fill="#74efc8"/><path d="M2.5 8.5h12l2.5 3h-12z" fill="#79bfe2"/><path d="M5 13h12l-2.5 3h-12z" fill="#a88bf5"/></symbol>
+<symbol id="theme-dark" viewBox="0 0 24 24"><path d="M20.5 13.2A8.6 8.6 0 0 1 10.8 3.5a8.6 8.6 0 1 0 9.7 9.7Z"/></symbol>
+<symbol id="theme-light" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+<symbol id="theme-system" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M12 17v3m-4 0h8"/></symbol>
+</defs></svg>

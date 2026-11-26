@@ -1,0 +1,7 @@
+**
+!requirements.txt
+!LICENSE
+src/ui/logo-preview.*
+!src/
+!src/**
+**/__pycache__/

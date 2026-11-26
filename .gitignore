@@ -1,0 +1,9 @@
+.alchemy/runs/
+__pycache__/
+*.py[cod]
+.env
+.venv/
+data/
+node_modules/
+test-results/
+playwright-report/

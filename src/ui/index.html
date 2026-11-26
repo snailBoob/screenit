@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#07111f" />
+    <title>SCREENIT.</title>
+    <link rel="icon" href="/screenit-512.png?v=1.1.5" sizes="512x512" type="image/png" />
+    <link rel="apple-touch-icon" href="/screenit-512.png?v=1.1.5" sizes="512x512" />
+    <link rel="manifest" href="/screenit.webmanifest" />
+    <link rel="stylesheet" href="/screen.css" />
+    <script type="module" src="/app.mjs"></script>
+  </head>
+  <body>
+    <header class="top">
+      <h1 class="sr">Perpetual futures screener</h1>
+      <a class="brand" href="/" aria-label="SCREENIT. home">
+        <svg class="brand-mark" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="2.88"/><g transform="translate(-1.6 0)"><path d="M5.5 14h4l2.5-6 2 8 2-4h2.5" fill="none" stroke-width="2" stroke-linejoin="round"/><circle cx="20.55" cy="15.65" r="1.35" fill="#72b1ff"/></g></svg>
+        <span class="wordmark">SCREEN<span>IT</span>.</span>
+      </a>
+      <div class="venue-bar" role="group" aria-label="Select exchange">
+        <button data-ex="binance">
+          <svg aria-hidden="true"><use href="/icons.svg#binance" /></svg>
+          Binance</button
+        ><button data-ex="hyperliquid">
+          <svg aria-hidden="true"><use href="/icons.svg#hyper" /></svg>
+          Hyperliquid
+        </button>
+      </div>
+      <select id="venue-select" aria-label="Exchange">
+        <option value="binance">Binance</option>
+        <option value="hyperliquid">Hyperliquid</option>
+      </select>
+      <button type="button" id="theme" aria-label="Switch theme" title="Switch theme"><svg aria-hidden="true"><use href="/icons.svg#theme-dark"/></svg></button>
+    </header>
+    <main>
+      <section class="book" aria-label="Market table">
+        <div class="tools">
+          <input
+            id="search"
+            type="search"
+            placeholder="Search..."
+            aria-label="Search instruments"
+            maxlength="128"
+            autocomplete="off"
+          /><span id="result">0/0 Symbols</span><span class="spacer"></span>
+          <button
+            id="filters"
+            class="tool"
+            aria-label="Filters"
+            title="Filters"
+          >
+            <svg aria-hidden="true"><use href="/icons.svg#filter" /></svg
+            ><b id="filter-count" hidden>0</b>
+          </button>
+          <button
+            id="columns"
+            class="tool"
+            aria-label="Columns"
+            title="Columns"
+          >
+            <svg aria-hidden="true"><use href="/icons.svg#columns" /></svg>
+          </button>
+          <button
+            id="open-alerts"
+            class="tool"
+            aria-label="Alerts"
+            title="Alerts"
+          >
+            <svg aria-hidden="true"><use href="/icons.svg#bell" /></svg
+            ><b id="nalerts" hidden>0</b>
+          </button>
+        </div>
+        <div
+          class="table-scroll"
+          tabindex="0"
+          aria-label="Scroll the market table"
+        >
+          <table>
+            <thead id="head"></thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </section>
+      <dialog id="panel" aria-labelledby="panel-title">
+        <div class="dialog-head">
+          <h2 id="panel-title"></h2>
+          <button id="filter-switch" class="rule-toggle" role="switch" aria-label="Apply filters" aria-checked="true"></button>
+          <button id="close" aria-label="Close">×</button>
+        </div>
+        <div id="panel-body"></div>
+      </dialog>
+      <dialog id="alert-panel" aria-labelledby="alert-title">
+        <button
+          id="collapse-alerts"
+          aria-label="Close alerts"
+          title="Collapse alerts panel"
+        >
+          ›
+        </button>
+        <div id="alert-body">
+          <div class="alert-top">
+            <h2 id="alert-title">Alerts</h2>
+            <div id="alert-actions"></div>
+          </div>
+          <div id="alert-tabs" class="tabs"></div>
+          <div id="alert-notifications"></div>
+          <div id="alert-form"></div>
+          <div id="alert-list"></div>
+        </div>
+      </dialog>
+    </main>
+    <footer>
+      <time id="asof"></time>
+      <div class="status"><i id="dot"></i><span class="status-size" aria-hidden="true">Hyperliquid · Disconnected</span><span class="status-size" aria-hidden="true">Hyperliquid · Live snapshot</span><span id="connection">Connecting</span></div>
+      <div class="status-details"><span id="saved" role="status"></span><span id="coverage"></span></div>
+      <span class="version" title="Screenit version">v1.1.6</span>
+    </footer>
+    <div id="notice" role="status" aria-live="polite"></div>
+    <noscript>Enable JavaScript to view market data in Screenit.</noscript>
+  </body>
+</html>

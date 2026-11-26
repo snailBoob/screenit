@@ -1,0 +1,24 @@
+services:
+  screenit:
+    container_name: screenit
+    image: screenit:latest
+    pull_policy: never
+    platform: linux/amd64
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - ./data:/data
+    environment:
+      # Set this to the browser-facing hostname of the DSM reverse proxy.
+      SCREENIT_ALLOWED_HOSTS: "screenit.example.net"
+      SCREENIT_COINGECKO_KEY: ${SCREENIT_COINGECKO_KEY:-}
+      SCREENIT_FINNHUB_KEY: ${SCREENIT_FINNHUB_KEY:-}
+      SCREENIT_MARKET_CAP: ${SCREENIT_MARKET_CAP:-1}
+      SCREENIT_NTFY_TRUSTED_URL: ${SCREENIT_NTFY_TRUSTED_URL:-}
+      SCREENIT_NTFY_TOKEN: ${SCREENIT_NTFY_TOKEN:-}
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
