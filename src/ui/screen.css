@@ -904,15 +904,15 @@ dialog[data-view="filters"] .field select {
     scrollbar-width: none;
   }
   footer {
-    padding: 0 12px;
-    grid-template-columns: max-content minmax(0, 1fr) auto;
-    grid-template-areas: "time details details" "connection connection ." "version version version";
+    padding: 6px 12px;
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-areas: "connection time" "details details" "version version";
     height: auto;
-    min-height: 56px;
-    grid-template-rows: repeat(3, auto);
-    gap: 0 6px;
+    gap: 0 8px;
   }
-  footer .status { border: 0; padding: 0; }
+  footer .status { justify-self: start; border: 0; padding: 0; }
+  footer .footer-links { justify-self: stretch; justify-content: space-between; margin-top: 4px; }
+  footer .version { flex: none; }
   dialog[data-view="filters"],
   dialog[data-view="columns"] {
     top: 114px;

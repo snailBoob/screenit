@@ -1,5 +1,5 @@
 FROM python:3.13-slim@sha256:7249d5587b78209a006dc4a3b5340678f84ea729239193aa559962cd8c1fce50
-LABEL org.opencontainers.image.version="1.1.7"
+LABEL org.opencontainers.image.version="1.1.8"
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 SCREENIT_BIND=0.0.0.0 SCREENIT_DATA=/data
 WORKDIR /app
 COPY requirements.txt .

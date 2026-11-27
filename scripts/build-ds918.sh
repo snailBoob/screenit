@@ -3,7 +3,7 @@
 set -eu
 umask 077
 cd "$(dirname "$0")/.."
-out=${1:-"$HOME/Downloads/screenit-ds918-1.1.7"}
+out=${1:-"$HOME/Downloads/screenit-ds918-1.1.8"}
 [ ! -e "$out" ] || { echo "Already exists: $out. Choose a new output folder." >&2; exit 1; }
 mkdir -p "$(dirname "$out")"
 stage=$(mktemp -d "$(dirname "$out")/.screenit-export.XXXXXX")

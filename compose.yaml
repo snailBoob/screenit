@@ -1,6 +1,6 @@
 services:
   screenit:
-    image: ghcr.io/snailboob/screenit:1.1.7
+    image: ghcr.io/snailboob/screenit:1.1.8
     restart: unless-stopped
     ports:
       - "127.0.0.1:${SCREENIT_HOST_PORT:-8080}:8080"
